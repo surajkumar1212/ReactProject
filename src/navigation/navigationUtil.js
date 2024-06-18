@@ -7,11 +7,13 @@ import SettingsScreen from '../screens/Settings';
 import LottieAnim from '../screens/Lottie';
 import HomeScreenMain from '../screens/HomeScreenMain';
 import HomeScreenClassComp from '../screens/HomeScreenClassComp';
+import AdvancedComp from '../screens/AdvancedComp';
 
 function RootStack() {
     return (
       <Stack.Navigator>
-          <Stack.Screen name="HomeScreenClassComp" component={HomeScreenClassComp} />
+        <Stack.Screen name="AdvancedComp" component={AdvancedComp} />
+        <Stack.Screen name="HomeScreenClassComp" component={HomeScreenClassComp} />
          <Stack.Screen name="HomeScreenMain" component={HomeScreenMain} />
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="Settings" component={SettingsScreen} />
