@@ -5,22 +5,23 @@
  * @format
  */
 
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
 } from 'react-native';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import AppNavigator from './src/navigation/navigationUtil';
+import MyProvider from './src/context/MyProvider';
 
+function App(){
 
-
-
-function App(): React.JSX.Element {
-
+  // const [value, setValue] = useState('Hello, World!');
   return (
-    <ErrorBoundary>
-      <AppNavigator/>
-    </ErrorBoundary>
+        <ErrorBoundary>
+          <MyProvider>
+             <AppNavigator/>
+          </MyProvider>
+        </ErrorBoundary>
   );
 }
 
