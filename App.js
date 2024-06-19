@@ -11,16 +11,12 @@ import {
 } from 'react-native';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import AppNavigator from './src/navigation/navigationUtil';
-import MyProvider from './src/context/MyProvider';
 
 function App(){
-
-  // const [value, setValue] = useState('Hello, World!');
+  
   return (
         <ErrorBoundary>
-          <MyProvider>
-             <AppNavigator/>
-          </MyProvider>
+            <AppNavigator/>
         </ErrorBoundary>
   );
 }
