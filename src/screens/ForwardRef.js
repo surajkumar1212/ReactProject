@@ -1,6 +1,8 @@
-import React, {useState, useEffect, useCallback, useRef, useMemo, forwardRef} from 'react';
+import React, {useState, useEffect, useCallback, useRef, useMemo, forwardRef, useContext} from 'react';
 import {View, Text, StyleSheet, TextInput, Button} from 'react-native'
-  
+import MyContext from '../context/MyContext';
+import { useNavigation } from '@react-navigation/native';
+
 // const CustomTextInput = forwardRef((props, ref)=>(
 //     <View>
 //         <TextInput 
@@ -26,6 +28,8 @@ const MemoizedTextComp = React.memo(CustomTextInput);  //Memoizing the component
 function ForwardRef() {
     const inputRef = useRef(null);
     const [count, setCount] = useState(0);
+    const {data, setData, data1} = useContext(MyContext);
+    const navigation = useNavigation();
     console.log("Parent rendered");
     const handleFocusInput = () => {
      if(inputRef.current){
@@ -66,9 +70,13 @@ function ForwardRef() {
         <Button title='Update Count' onPress={updateCount}/>
         <Text>{count}</Text>
         <Text>{value}</Text>
+        <Text>{data}</Text>
+        <Text>{data1}</Text>
         {/* <CustomTextInput ref={inputRef} />
         <Button title='FocusInput' onPress={handleFocusInput}/>
         <Button title='BlurInput' onPress={handleBlurInput}/> */}
+         <Button title='New Data' onPress={()=>setData('New updated data from context')}/>
+         <Button title='Go To Next Screen' onPress={()=>navigation.navigate('Home')}/>
       </View>
     );
   }

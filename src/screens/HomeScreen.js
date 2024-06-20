@@ -1,10 +1,11 @@
-import React, {useState, useRef, useEffect} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native'
+import React, {useState, useRef, useEffect, useContext} from 'react';
+import {View, Text, TouchableOpacity, Button} from 'react-native'
 import {
     useNavigation,
   } from '@react-navigation/native';
   import Animated,{ useSharedValue, useAnimatedProps, withTiming } from 'react-native-reanimated';
   import Svg, { Circle, Rect } from 'react-native-svg';
+  import MyContext from '../context/MyContext';
 
 const AnimatedCircle = Animated.createAnimatedComponent(Circle);
 
@@ -22,6 +23,7 @@ function HomeScreen() {
  const color = useSharedValue('rgb(43,88,87)');
  const [switchState, setSwitchState] = useState(true);
  const navigation = useNavigation();
+ const {data, setData, data1, setData1} = useContext(MyContext);
   // const fadeIn = () => {
   //   Animated.timing(fadeAnim, {
   //     toValue: 1,
@@ -80,6 +82,9 @@ function HomeScreen() {
       <TouchableOpacity onPress={() => navigation.navigate('Settings')}>
         <Text>Next</Text>
       </TouchableOpacity>
+      <Text>{data1}</Text>
+      <Text>{data}</Text>
+      <Button title = 'Update Data 1' onPress={()=> setData1('New updated data 1 from context')} />
       </View>
     );
   }
