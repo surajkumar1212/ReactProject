@@ -9,10 +9,12 @@ import HomeScreenMain from '../screens/HomeScreenMain';
 import HomeScreenClassComp from '../screens/HomeScreenClassComp';
 import AdvancedComp from '../screens/AdvancedComp';
 import ForwardRef from '../screens/ForwardRef';
+import Hooks from '../screens/Hooks';
 
 function RootStack() {
     return (
       <Stack.Navigator>
+        <Stack.Screen name="Hooks" component={Hooks} />
         <Stack.Screen name="ForwardRef" component={ForwardRef} />
         <Stack.Screen name="AdvancedComp" component={AdvancedComp} />
         <Stack.Screen name="HomeScreenClassComp" component={HomeScreenClassComp} />
@@ -23,6 +25,7 @@ function RootStack() {
       </Stack.Navigator>
     );
   }
+  
 const Stack = createNativeStackNavigator();
 export default function AppNavigator() {
     return (
