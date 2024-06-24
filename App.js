@@ -12,6 +12,7 @@ import {
 import ErrorBoundary from './src/components/ErrorBoundary';
 import AppNavigator from './src/navigation/navigationUtil';
 import MyProvider from './src/context/MyProvider';
+import DrawerScreen from './src/screens/MainScreen';
 
 function App(){
 

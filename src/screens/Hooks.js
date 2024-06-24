@@ -28,7 +28,7 @@ const CustomTextInput = forwardRef((props, ref)=>{
     <View>
     <TextInput 
       ref={childRef}
-      style={{borderColor: 'grey', borderWidth: 1, marginHorizontal: 15}}
+      style={{borderColor: 'black', borderWidth: 1, marginHorizontal: 15}}
       placeholder='Enter your text'
     />
     </View>
@@ -60,7 +60,7 @@ const Hooks = () => {
     <View>
         <Text>Hooks</Text>
         <Text>{state.count}</Text>
-        <Button title="Inc Count" onPress={() => dispatch({type: 'increment'})} />
+        <Button title="Hello Inc Count" onPress={() => dispatch({type: 'increment'})} />
         <Button title="Dec Count" onPress={() => dispatch({type: 'decrement'})}/>
         <CustomTextInput ref={parentRef} />
         <Button title="Focus" onPress={() => parentRef.current.childFocus()} />
