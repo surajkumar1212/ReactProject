@@ -15,7 +15,6 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 
 
-
 const initialData = [
   {
     id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -116,7 +115,7 @@ const Item = ({ title, description, image }) => (
       <Text style={styles.description}>{description}</Text>
     </View>
     <TouchableOpacity style={styles.floatingButton}>
-      <Icon name="remove" size={16} color="white" />
+      <Icon name="delete" size={16} color="white" />
       </TouchableOpacity>
   </View>
 );
@@ -205,13 +204,12 @@ const styles = StyleSheet.create({
   },
 
   floatingButton: {
-    position: 'absolute',
+    // position: 'absolute',
     width: 24,
     height: 24,
     alignItems: 'center',
     justifyContent: 'center',
-    right: 10,
-    bottom: 10,
+    right: 16,
     backgroundColor: '#ff6347',
     borderRadius: 10,
     elevation: 8,

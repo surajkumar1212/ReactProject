@@ -15,6 +15,9 @@ import AdvancedComp from '../screens/AdvancedComp';
 import ForwardRef from '../screens/ForwardRef';
 import Hooks from '../screens/Hooks';
 import MainScreen from '../screens/MainScreen';
+import ReduxExScreen from '../screens/ReduxExScreen';
+import PostListScreen from '../screens/PostListScreen';
+import SimpleAnimations from '../screens/SimpleAnimations';
 
 function RootStack() {
   return (
@@ -34,8 +37,9 @@ function RootStack() {
 const Drawer = createDrawerNavigator();
 function DrawerNavigation() {
   return (
-    <Drawer.Navigator initialRouteName="BottomTabs">
+    <Drawer.Navigator initialRouteName="SimpleAnimations">
       <Drawer.Screen name="BottomTabs" component={BottomTabs} />
+      <Drawer.Screen name="SimpleAnimations" component={SimpleAnimations} />
       <Drawer.Screen name="Hooks" component={Hooks} />
       <Drawer.Screen name="ForwardRef" component={ForwardRef} />
       <Drawer.Screen name="AdvancedComp" component={AdvancedComp} />
@@ -56,6 +60,8 @@ function BottomTabs() {
       headerShown: false
     }}>
       <Tab.Screen name="MainScreen" component={MainScreen} />
+      <Tab.Screen name="PostListScreen" component={PostListScreen} />
+      {/* <Tab.Screen name="ReduxExScreen" component={ReduxExScreen} /> */}
       <Tab.Screen name="Settings" component={SettingsScreen} />
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Lottie" component={LottieAnim} />
