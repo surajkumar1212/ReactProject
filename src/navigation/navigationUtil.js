@@ -15,6 +15,8 @@ import AdvancedComp from '../screens/AdvancedComp';
 import ForwardRef from '../screens/ForwardRef';
 import Hooks from '../screens/Hooks';
 import MainScreen from '../screens/MainScreen';
+import ReduxExScreen from '../screens/ReduxExScreen';
+import PostListScreen from '../screens/PostListScreen';
 
 function RootStack() {
   return (
@@ -56,6 +58,8 @@ function BottomTabs() {
       headerShown: false
     }}>
       <Tab.Screen name="MainScreen" component={MainScreen} />
+      <Tab.Screen name="PostListScreen" component={PostListScreen} />
+      {/* <Tab.Screen name="ReduxExScreen" component={ReduxExScreen} /> */}
       <Tab.Screen name="Settings" component={SettingsScreen} />
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Lottie" component={LottieAnim} />

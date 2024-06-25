@@ -5,23 +5,28 @@
  * @format
  */
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {
   StyleSheet,
 } from 'react-native';
 import ErrorBoundary from './src/components/ErrorBoundary';
 import AppNavigator from './src/navigation/navigationUtil';
 import MyProvider from './src/context/MyProvider';
-import DrawerScreen from './src/screens/MainScreen';
+import { Provider } from 'react-redux';
+import store from './src/redux/store/store'
 
-function App(){
+function App() {
 
   return (
-        <ErrorBoundary>
-          <MyProvider>
-            <AppNavigator/>
-          </MyProvider>
-        </ErrorBoundary>
+    <Provider store={store}>
+      <ErrorBoundary>
+        <MyProvider>
+          {/* <PostList /> */}
+          <AppNavigator/>
+        </MyProvider>
+
+      </ErrorBoundary>
+    </Provider>
   );
 }
 
