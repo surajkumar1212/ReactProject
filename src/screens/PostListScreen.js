@@ -47,7 +47,8 @@ const PostListScreen = () => {
                     loop
                     style={styles.loaderLottie}
                 />
-            </View>
+            </View>   
+            
         );
     }
 
@@ -176,6 +177,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
-});
+}); 
 
 export default PostListScreen;
