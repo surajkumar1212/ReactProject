@@ -76,7 +76,7 @@ const PostListScreen = () => {
                     </View>
                 }
 
-                contentContainerStyle={{ flex: 1, marginBottom: 40, paddingBottom: insets.bottom }}
+                contentContainerStyle={{ marginBottom: 40, paddingBottom: insets.bottom }}
             />
         </SafeAreaView>
     );

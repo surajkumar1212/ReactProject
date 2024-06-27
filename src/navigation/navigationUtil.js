@@ -1,10 +1,8 @@
 import * as React from 'react';
-import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { BlurView } from 'expo-blur';
 
 import HomeScreen from '../screens/HomeScreen';
 import SettingsScreen from '../screens/Settings';
@@ -18,6 +16,7 @@ import MainScreen from '../screens/MainScreen';
 import ReduxExScreen from '../screens/ReduxExScreen';
 import PostListScreen from '../screens/PostListScreen';
 import SimpleAnimations from '../screens/SimpleAnimations';
+import DragAndDropAnimation from '../screens/DragAndDropAnimation';
 
 function RootStack() {
   return (
@@ -40,6 +39,7 @@ function DrawerNavigation() {
     <Drawer.Navigator initialRouteName="SimpleAnimations">
       <Drawer.Screen name="BottomTabs" component={BottomTabs} />
       <Drawer.Screen name="SimpleAnimations" component={SimpleAnimations} />
+      <Drawer.Screen name="DragAndDrop" component={DragAndDropAnimation} />
       <Drawer.Screen name="Hooks" component={Hooks} />
       <Drawer.Screen name="ForwardRef" component={ForwardRef} />
       <Drawer.Screen name="AdvancedComp" component={AdvancedComp} />
