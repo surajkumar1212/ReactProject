@@ -80,37 +80,6 @@ const SimpleAnimations = () => {
 
     const handlePress = () => {
         updateUI()
-
-        // width.value = withSpring(width.value === intialValue ? finalValue : intialValue);
-        // height.value = withSpring(height.value === intialValue ? finalValue : intialValue);
-
-        // width.value = withRepeat(
-        //     withTiming(width.value === intialValue ? finalValue : intialValue, { duration: 1000 }),
-        //     -1,
-        //     true,
-        //     () => {},
-        //     ReduceMotion.System,
-        //   )
-
-        //   height.value = withRepeat(
-        //     withTiming(width.value === intialValue ? finalValue : intialValue, { duration: 1000 }),
-        //     -1,
-        //     true,
-        //     () => {},
-        //     ReduceMotion.System,
-        //   )
-
-        // width.value = withRepeat(withSpring(width.value === intialValue ? finalValue : intialValue));
-        // height.value = withRepeat(withSpring(height.value === intialValue ? finalValue : intialValue));
-
-        // const randomX = generateRandomPosition(screenWidth - 100, 100);
-        // const randomY = generateRandomPosition(screenHeight - 100, 100);
-
-        // x.value = withSpring(randomX);
-        // y.value = withSpring(randomY);
-
-        // color.value = generateRandomColor();
-
     };
 
     const animatedStyle = useAnimatedStyle(() => {
